@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Project -o D:/PipeLine/Project/CPU_module_IF_ID_REG.tfi -lib work D:/PipeLine/PipeLine_code//CPU_module_IF_ID_REG.v -module CPU_module_IF_ID_REG -template E:/Xilinx12.4/ISE_DS/ISE//data/tfi.tft -deleteonerror 

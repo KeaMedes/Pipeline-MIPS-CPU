@@ -1,0 +1,4 @@
+This is a 5 level pipeline mips cpu.
+with 32 instructions supported.
+debug information is displayed on lcd.
+the instructions is as following.

@@ -1,0 +1,682 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> Reading design: CPU_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU_Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU_Top"
+Output Format                      : NGC
+Target Device                      : xa6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../PipeLine_IPCore"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_IPCore/Inst_Cache.v\" into library work
+Parsing module <Inst_Cache>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_IPCore/Data_Cache.v\" into library work
+Parsing module <Data_Cache>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_WB.v\" into library work
+Parsing module <CPU_module_WB>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_MEM_WB_REG.v\" into library work
+Parsing module <CPU_module_MEM_WB_REG>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_MEM.v\" into library work
+Parsing module <CPU_module_MEM>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_IF_ID_REG.v\" into library work
+Parsing module <CPU_module_IF_ID_REG>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_IF.v\" into library work
+Parsing module <CPU_module_IF>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_ID_EX_REG.v\" into library work
+Parsing module <CPU_module_ID_EX_REG>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_ID.v\" into library work
+Parsing module <CPU_module_ID>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_EX_MEM_REG.v\" into library work
+Parsing module <CPU_module_EX_MEM_REG>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_module_EX.v\" into library work
+Parsing module <CPU_module_EX>.
+Analyzing Verilog file \"\PipeLine\Project\../PipeLine_code/CPU_Top.v\" into library work
+Parsing module <CPU_Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU_Top>.
+
+Elaborating module <CPU_module_IF>.
+
+Elaborating module <Inst_Cache>.
+
+Elaborating module <CPU_module_IF_ID_REG>.
+
+Elaborating module <CPU_module_ID>.
+
+Elaborating module <CPU_module_ID_EX_REG>.
+
+Elaborating module <CPU_module_EX>.
+
+Elaborating module <CPU_module_EX_MEM_REG>.
+
+Elaborating module <CPU_module_MEM>.
+
+Elaborating module <Data_Cache>.
+
+Elaborating module <CPU_module_MEM_WB_REG>.
+
+Elaborating module <CPU_module_WB>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU_Top>.
+    Related source file is "/pipeline/pipeline_code/cpu_top.v".
+    Summary:
+	no macro.
+Unit <CPU_Top> synthesized.
+
+Synthesizing Unit <CPU_module_IF>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_if.v".
+    Found 32-bit register for signal <pc>.
+    Found 32-bit adder for signal <NextPC_IF> created at line 33.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <CPU_module_IF> synthesized.
+
+Synthesizing Unit <CPU_module_IF_ID_REG>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_if_id_reg.v".
+    Found 64-bit register for signal <cache>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <CPU_module_IF_ID_REG> synthesized.
+
+Synthesizing Unit <CPU_module_ID>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_id.v".
+    Found 1024-bit register for signal <n0177[1023:0]>.
+    Found 32-bit adder for signal <BranchAddr_id> created at line 170.
+    Found 32-bit 32-to-1 multiplexer for signal <RsAddr_id[4]_regfiles[31][31]_wide_mux_46_OUT> created at line 184.
+    Found 32-bit 32-to-1 multiplexer for signal <RtAddr_id[4]_regfiles[31][31]_wide_mux_50_OUT> created at line 185.
+    Found 5-bit comparator equal for signal <RegWriteAddr_wb[4]_RsAddr_id[4]_equal_43_o> created at line 182
+    Found 5-bit comparator equal for signal <RegWriteAddr_wb[4]_RtAddr_id[4]_equal_45_o> created at line 183
+    Found 5-bit comparator equal for signal <RegWriteAddr_ex[4]_RsAddr_id[4]_equal_91_o> created at line 205
+    Found 5-bit comparator equal for signal <RegWriteAddr_ex[4]_RtAddr_id[4]_equal_92_o> created at line 205
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 1024 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <CPU_module_ID> synthesized.
+
+Synthesizing Unit <CPU_module_ID_EX_REG>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_id_ex_reg.v".
+    Found 183-bit register for signal <cache>.
+    Summary:
+	inferred 183 D-type flip-flop(s).
+Unit <CPU_module_ID_EX_REG> synthesized.
+
+Synthesizing Unit <CPU_module_EX>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_ex.v".
+        ADD = 11'b10000000000
+        AND = 11'b01000000000
+        XOR = 11'b00100000000
+        SUB = 11'b00010000000
+        SLT = 11'b00001000000
+        SLTU = 11'b00000100000
+        SLL = 11'b00000010000
+        SRL = 11'b00000001000
+        SRA = 11'b00000000100
+        BEQ = 11'b00000000010
+        BNE = 11'b00000000001
+    Found 32-bit subtractor for signal <ALU_A[31]_ALU_B[31]_sub_26_OUT> created at line 95.
+    Found 32-bit adder for signal <ALU_A[31]_ALU_B[31]_add_26_OUT> created at line 95.
+    Found 32-bit shifter logical left for signal <sll_rst> created at line 99
+    Found 32-bit shifter logical right for signal <srl_rst> created at line 100
+    Found 32-bit shifter arithmetic right for signal <sra_rst> created at line 107
+    Found 5-bit comparator equal for signal <n0003> created at line 82
+    Found 5-bit comparator equal for signal <RegWriteAddr_wb[4]_RsAddr_ex[4]_equal_3_o> created at line 82
+    Found 5-bit comparator equal for signal <n0013> created at line 84
+    Found 5-bit comparator equal for signal <RegWriteAddr_wb[4]_RtAddr_ex[4]_equal_8_o> created at line 84
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <CPU_module_EX> synthesized.
+
+Synthesizing Unit <CPU_module_EX_MEM_REG>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_ex_mem_reg.v".
+    Found 73-bit register for signal <cache>.
+    Summary:
+	inferred  73 D-type flip-flop(s).
+Unit <CPU_module_EX_MEM_REG> synthesized.
+
+Synthesizing Unit <CPU_module_MEM>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_mem.v".
+WARNING:Xst:647 - Input <ALUResult_mem<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ALUResult_mem<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <MemRead_mem> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <CPU_module_MEM> synthesized.
+
+Synthesizing Unit <CPU_module_MEM_WB_REG>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_mem_wb_reg.v".
+    Found 39-bit register for signal <cache>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+Unit <CPU_module_MEM_WB_REG> synthesized.
+
+Synthesizing Unit <CPU_module_WB>.
+    Related source file is "/pipeline/pipeline_code/cpu_module_wb.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <CPU_module_WB> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Registers                                            : 6
+ 1024-bit register                                     : 1
+ 183-bit register                                      : 1
+ 32-bit register                                       : 1
+ 39-bit register                                       : 1
+ 64-bit register                                       : 1
+ 73-bit register                                       : 1
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 8
+# Multiplexers                                         : 48
+ 32-bit 2-to-1 multiplexer                             : 45
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../PipeLine_IPCore/Inst_Cache.ngc>.
+Reading core <../PipeLine_IPCore/Data_Cache.ngc>.
+Loading core <Inst_Cache> for timing and area information for instance <INST_CACHE>.
+Loading core <Data_Cache> for timing and area information for instance <DATA_CACHE>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Registers                                            : 1415
+ Flip-Flops                                            : 1415
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 8
+# Multiplexers                                         : 48
+ 32-bit 2-to-1 multiplexer                             : 45
+ 32-bit 32-to-1 multiplexer                            : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CPU_Top> ...
+
+Optimizing unit <CPU_module_IF> ...
+
+Optimizing unit <CPU_module_IF_ID_REG> ...
+
+Optimizing unit <CPU_module_ID> ...
+
+Optimizing unit <CPU_module_ID_EX_REG> ...
+
+Optimizing unit <CPU_module_EX_MEM_REG> ...
+
+Optimizing unit <CPU_module_MEM_WB_REG> ...
+
+Optimizing unit <CPU_module_EX> ...
+WARNING:Xst:2677 - Node <IF/pc_31> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_30> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_29> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_28> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_27> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_26> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_25> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_24> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_23> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_22> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_21> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_20> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_19> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_18> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_17> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_16> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_15> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_14> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_13> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_12> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_1> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF/pc_0> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_63> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_62> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_61> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_60> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_59> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_58> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_57> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_56> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_55> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_54> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_53> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_52> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_51> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_50> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_49> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_48> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_47> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_46> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_45> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_44> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_33> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <IF_ID/cache_32> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_31> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_30> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_29> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_28> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_27> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_26> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_25> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_24> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_23> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_22> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_21> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_20> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_19> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_18> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_17> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_16> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_15> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_14> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_13> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_12> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_1> of sequential type is unconnected in block <CPU_Top>.
+WARNING:Xst:2677 - Node <ID_EX/cache_0> of sequential type is unconnected in block <CPU_Top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_162> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_141> <ID_EX/cache_109> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_159> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_138> <ID_EX/cache_106> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_156> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_135> <ID_EX/cache_103> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_132> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_100> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_129> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_97> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_182> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_179> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_128> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_96> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_163> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_142> <ID_EX/cache_110> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_160> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_139> <ID_EX/cache_107> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_157> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_136> <ID_EX/cache_104> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_133> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_101> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_130> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_98> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_164> in Unit <CPU_Top> is equivalent to the following 18 FFs/Latches, which will be removed : <ID_EX/cache_143> <ID_EX/cache_127> <ID_EX/cache_126> <ID_EX/cache_125> <ID_EX/cache_124> <ID_EX/cache_123> <ID_EX/cache_122> <ID_EX/cache_121> <ID_EX/cache_120> <ID_EX/cache_119> <ID_EX/cache_118> <ID_EX/cache_117> <ID_EX/cache_116> <ID_EX/cache_115> <ID_EX/cache_114> <ID_EX/cache_113> <ID_EX/cache_112> <ID_EX/cache_111> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_161> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_140> <ID_EX/cache_108> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_158> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_137> <ID_EX/cache_105> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_155> in Unit <CPU_Top> is equivalent to the following 2 FFs/Latches, which will be removed : <ID_EX/cache_134> <ID_EX/cache_102> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/cache_131> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <ID_EX/cache_99> 
+INFO:Xst:2261 - The FF/Latch <EX_MEM/cache_72> in Unit <CPU_Top> is equivalent to the following FF/Latch, which will be removed : <EX_MEM/cache_69> 
+Found area constraint ratio of 100 (+ 5) on block CPU_Top, actual ratio is 35.
+FlipFlop MEM_WB/cache_32 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_33 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_34 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_35 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_36 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_37 has been replicated 1 time(s)
+FlipFlop MEM_WB/cache_38 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1313
+ Flip-Flops                                            : 1313
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU_Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3009
+#      GND                         : 3
+#      INV                         : 2
+#      LUT1                        : 8
+#      LUT2                        : 67
+#      LUT3                        : 95
+#      LUT4                        : 51
+#      LUT5                        : 1310
+#      LUT6                        : 1266
+#      MUXCY                       : 49
+#      MUXF7                       : 103
+#      VCC                         : 3
+#      XORCY                       : 52
+# FlipFlops/Latches                : 1313
+#      FD                          : 160
+#      FDR                         : 119
+#      FDRE                        : 1034
+# RAMS                             : 3
+#      RAMB16BWER                  : 2
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1313  out of  18224     7%  
+ Number of Slice LUTs:                 2799  out of   9112    30%  
+    Number used as Logic:              2799  out of   9112    30%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2854
+   Number with an unused Flip Flop:    1541  out of   2854    53%  
+   Number with an unused LUT:            55  out of   2854     1%  
+   Number of fully used LUT-FF pairs:  1258  out of   2854    44%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    232     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of     32     9%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                    | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                    | 1316  |
+IF/INST_CACHE/BU2/doutb(0)         | NONE(IF/INST_CACHE/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.802ns (Maximum Frequency: 72.455MHz)
+   Minimum input arrival time before clock: 7.161ns
+   Maximum output required time after clock: 3.701ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.802ns (frequency: 72.455MHz)
+  Total number of paths / destination ports: 66667780 / 2419
+-------------------------------------------------------------------------
+Delay:               13.802ns (Levels of Logic = 13)
+  Source:            ID_EX/cache_171 (FF)
+  Destination:       ID_EX/cache_49 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ID_EX/cache_171 to ID_EX/cache_49
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   1.015  ID_EX/cache_171 (ID_EX/cache_171)
+     LUT6:I0->O            2   0.203   0.721  EX/ForwardA<0>4_SW0 (N41)
+     LUT6:I4->O           19   0.203   1.176  EX/ForwardA<0>4 (EX/ForwardA<0>4)
+     LUT6:I4->O            1   0.203   0.580  EX/A<3>1_SW4 (N482)
+     LUT5:I4->O           69   0.205   1.673  EX/A<3>1 (EX/A<3>)
+     LUT6:I5->O            7   0.205   0.774  EX/Sh25121 (EX/N427)
+     LUT5:I4->O            2   0.205   0.617  EX/_n0353<14>4 (EX/_n0353<14>3)
+     LUT6:I5->O            1   0.205   0.000  EX/_n0353<14>6_G (N524)
+     MUXF7:I1->O           1   0.140   0.580  EX/_n0353<14>6 (EX/_n0353<14>5)
+     LUT5:I4->O            2   0.205   0.617  EX/_n0353<14>9 (ALUResult_ex<14>)
+     LUT3:I2->O            1   0.205   0.580  EX/ALUResult_ex[31]_GND_7_o_equal_52_o<31>6_SW0 (N334)
+     LUT6:I5->O           24   0.205   1.277  EX/ALUResult_ex[31]_GND_7_o_equal_52_o<31>7 (EX/ALUResult_ex[31]_GND_7_o_equal_52_o<31>6)
+     LUT6:I4->O           18   0.203   1.050  ID_EX/Flush1_5 (ID_EX/Flush14)
+     LUT6:I5->O            1   0.205   0.000  ID_EX/cache_49_rstpot (ID_EX/cache_49_rstpot)
+     FD:D                      0.102          ID_EX/cache_49
+    ----------------------------------------
+    Total                     13.802ns (3.141ns logic, 10.661ns route)
+                                       (22.8% logic, 77.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1633 / 1313
+-------------------------------------------------------------------------
+Offset:              7.161ns (Levels of Logic = 6)
+  Source:            rst (PAD)
+  Destination:       IF_ID/cache_43 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to IF_ID/cache_43
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1157   1.222   2.245  rst_IBUF (rst_IBUF)
+     LUT3:I2->O            3   0.205   0.755  EX/Z1_SW0 (N114)
+     LUT6:I4->O            1   0.203   0.000  EX/ALUResult_ex[31]_GND_7_o_equal_52_o<31>8_SW1_G (N516)
+     MUXF7:I1->O           3   0.140   0.898  EX/ALUResult_ex[31]_GND_7_o_equal_52_o<31>8_SW1 (N231)
+     LUT6:I2->O           15   0.203   0.982  IF_ID/rst_IF_Flush_OR_1_o1 (IF_ID/rst_IF_Flush_OR_1_o)
+     LUT6:I5->O            1   0.205   0.000  IF_ID/cache_43_rstpot (IF_ID/cache_43_rstpot)
+     FD:D                      0.102          IF_ID/cache_43
+    ----------------------------------------
+    Total                      7.161ns (2.280ns logic, 4.881ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            EX_MEM/cache_72 (FF)
+  Destination:       MemRead_mem_LED (PAD)
+  Source Clock:      clk rising
+
+  Data Path: EX_MEM/cache_72 to MemRead_mem_LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.683  EX_MEM/cache_72 (EX_MEM/cache_72)
+     OBUF:I->O                 2.571          MemRead_mem_LED_OBUF (MemRead_mem_LED)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   13.802|    2.982|    1.447|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 41.55 secs
+ 
+--> 
+
+Total memory usage is 226424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/PipeLine/Project/Top_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Top_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/Top_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/IF/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/Instruction_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Instruction_id[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instruction_id[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/SLT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SLT</obj_property>
+      <obj_property name="ObjectShortName">SLT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/LW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">LW</obj_property>
+      <obj_property name="ObjectShortName">LW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/ADDI" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ADDI</obj_property>
+      <obj_property name="ObjectShortName">ADDI</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/SW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SW</obj_property>
+      <obj_property name="ObjectShortName">SW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/SLT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SLT</obj_property>
+      <obj_property name="ObjectShortName">SLT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/BNE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BNE</obj_property>
+      <obj_property name="ObjectShortName">BNE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/J" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">J</obj_property>
+      <obj_property name="ObjectShortName">J</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/Z" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Z</obj_property>
+      <obj_property name="ObjectShortName">Z</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ALUCode_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUCode_ex[10:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUCode_ex[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ALU_A" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_A[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ALU_B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_B[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/RsData_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RsData_ex[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RsData_ex[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/RtData_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RtData_ex[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RtData_ex[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ForwardA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ForwardA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ForwardB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ForwardB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ALUResult_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUResult_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult_mem[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/regfiles[9]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[9,31:0]</obj_property>
+      <obj_property name="ObjectShortName">regfiles[9,31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/ID/regfiles[8]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[8,31:0]</obj_property>
+      <obj_property name="ObjectShortName">regfiles[8,31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/ALUResult_ex" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUResult_ex[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUResult_ex[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/Binvert" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Binvert</obj_property>
+      <obj_property name="ObjectShortName">Binvert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Top_test/uut/EX/add_sub_rst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_sub_rst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">add_sub_rst[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

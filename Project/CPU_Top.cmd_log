@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/PipeLine/Project/CPU_Top.xst" -ofn "D:/PipeLine/Project/CPU_Top.syr" 
